@@ -15,6 +15,16 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    @can('create articles')
+                     You can Create ARTICLES.
+                     @endcan
+                     @can('publish articles')
+                     You can PUBLISH ARTICLES.
+                     @endcan
+                     @can('only super-admins can see this section')
+                     Congratulations, you are a super-admin!
+                     @endcan
                 </div>
             </div>
         </div>
